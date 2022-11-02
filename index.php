@@ -25,7 +25,7 @@ $password = "PASSWORD";
 //------------------------------------------------------
 ?>
 
-<h1>Link Shortener<br><a href="https://github.com/DarcyJProjects/PHP-Link-Shortening-Webpage" target="_blank" style="font-size: 15px;">Github</a></h1>
+<h1>Link Shortener<br><a href="https://link.darcyjprojects.xyz/vgTR" target="_blank" style="font-size: 15px;">Github</a></h1>
 
 <form action="" method="post">
 <a>Link: </a><input type="text" name="url" style="width:300px;"><br>
