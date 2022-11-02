@@ -14,14 +14,14 @@ a {
 </script>
 
 <?php
-error_reporting(0);
+//error_reporting(0);
 //CONFIG------------------------------------------------
 $shortenedLength = 4;
 
 //Include "/" at end of url and directory:
 $webserver = "https://link.darcyjprojects.xyz/";
 $webserverDir = "/var/www/link.darcyjprojects.xyz/";
-$password = "SET YOUR PASSWORD";
+$password = "PASSWORD";
 //------------------------------------------------------
 ?>
 
@@ -48,7 +48,7 @@ if ($_POST['password'] == $password){
         $fileContent = "<?php\nheader('Location: $url');\nexit;\n?>";
 
         //Create file
-        $file = fopen($shortenedFile, "w");
+        $file = fopen($shortenedFile, "w") or die("Unable to create redirect file!");
         fwrite($file, $fileContent);
         fclose($file);
 
