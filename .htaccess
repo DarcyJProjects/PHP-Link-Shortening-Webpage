@@ -1,10 +1,12 @@
-#turn on url rewriting 
+#turn on url rewriting
 RewriteEngine on
 
-#remove the need for .php extention 
-RewriteCond %{REQUEST_FILENAME} !-d 
-RewriteCond %{REQUEST_FILENAME}\.php -f 
-RewriteRule ^(.*)$ $1.php
+#remove the need for .php extention and redirect to https
+#change https://yourwebsite.com.au to your website domain (include the https:// if you have it setup)
+RewriteCond %{HTTPS} off
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ https://yourwebsite.com.au/$1.php
 
 #disable viewing indexes for privacy reasons
 Options -Indexes
