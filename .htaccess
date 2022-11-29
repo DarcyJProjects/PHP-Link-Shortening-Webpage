@@ -1,15 +1,13 @@
 #turn on url rewriting
 RewriteEngine on
 
-#remove the need for .php extention and redirect to https
-#change https://yourwebsite.com.au to your website domain (include the https:// if you have it setup)
-RewriteCond %{HTTPS} off
+#remove the need for .php extention
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
-RewriteRule ^(.*)$ https://yourwebsite.com.au/$1.php
+RewriteRule ^(.*)$ /$1.php
 
 #disable viewing indexes for privacy reasons
-Options -Indexes
+#Options -Indexes
 
 #if you want to use a custom 404 page, create one name "404.html", put it in a folder named "error_pages" (in this directory), and uncomment the following line:
 #ErrorDocument 404 /error_pages/404.html
