@@ -1,0 +1,11 @@
+#Password protect this directory
+#You'll need to setup a .htpasswd file and create an admin account.
+
+AuthType Basic
+AuthName "This directory and it's files are protected. Please enter a valid use>
+Require valid-user
+
+#Directory for accounts file
+AuthUserFile /etc/apache2/.htpasswd
+
+Options Indexes
